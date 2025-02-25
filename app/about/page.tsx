@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import gambarProfile from "@/./public/destadn.jpeg";
+import gambarProfile from "@/./public/destadw.jpeg";
 import { GraduationCap, MapPin, Sparkles, Heart } from "lucide-react";
 
 export default function AboutSection() {
@@ -41,19 +41,21 @@ export default function AboutSection() {
     <div className="bg-gray-50 min-h-screen">
       {/* 💡 Hero Section - Personal Info */}
       <section className="bg-gradient-to-br from-indigo-500 to-indigo-700 py-16 text-white ">
-        <div className="flex flex-row justify-center gap-40">
-          <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
+        <div className="flex flex-col items-center justify-center gap-8">
+          <div className="w-1/5 aspect-square rounded-full overflow-hidden border-[5px] border-white shadow-2xl mb-4 transform transition-transform duration-300 hover:scale-110 cursor-pointer">
             <Image
               src={gambarProfile}
               alt="Profile of Desta Novita Dewi"
-              width={120}
-              height={120}
+              width={400}
+              height={400}
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="flex flex-col">
-            <h1 className="text-3xl font-bold mb-2">Tentang Saya</h1>
-            <p className="text-lg max-w-md">
+          <div className="text-center">
+            <h1 className="text-4xl font-extrabold mb-4 drop-shadow-lg">
+              Tentang Saya
+            </h1>
+            <p className="text-lg max-w-2xl mx-auto leading-relaxed">
               Mahasiswa Sistem Informasi dengan ketertarikan pada pengembangan
               web, analisis data, pasar modal, investasi saham, dan manajemen
               proyek.
@@ -68,7 +70,7 @@ export default function AboutSection() {
           {aboutDetails.map((item, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-r ${item.gradient} rounded-2xl shadow-xl p-5 flex items-start gap-5 hover:scale-[1.02] transition-transform duration-300`}
+              className={`bg-gradient-to-r ${item.gradient} rounded-2xl shadow-xl p-5 flex items-start gap-5 hover:scale-[1.03] transition-transform duration-300`}
             >
               <div className="bg-white rounded-full p-3 shadow-md">
                 {item.icon}
@@ -87,23 +89,15 @@ export default function AboutSection() {
       </section>
 
       <style jsx>{`
-        @media (max-width: 360px) {
-          .w-36 {
-            width: 100px;
-            height: 100px;
+        @media (max-width: 768px) {
+          .w-1\/5 {
+            width: 40%;
           }
           h1 {
-            font-size: 1.5rem;
+            font-size: 2rem;
           }
           p {
-            font-size: 0.9rem;
-          }
-          div[class*="flex items-start"] {
-            flex-direction: column;
-            text-align: center;
-          }
-          div[class*="bg-white"] {
-            margin-bottom: 12px;
+            font-size: 1rem;
           }
         }
       `}</style>

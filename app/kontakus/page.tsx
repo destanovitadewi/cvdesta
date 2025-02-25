@@ -8,19 +8,19 @@ export default function ContactSection() {
     {
       icon: <Mail size={36} className="text-black" />,
       title: "Email",
-      detail: "destanovitadw@gmail.com",
+      detail: "Fadhillah121905@gmail.com",
       gradient: "from-purple-500 to-purple-700",
     },
     {
       icon: <Phone size={36} className="text-black" />,
       title: "Telepon",
-      detail: "+62 895-4147-78595",
+      detail: "+62 81346301871",
       gradient: "from-blue-500 to-blue-700",
     },
     {
       icon: <MapPin size={36} className="text-black" />,
       title: "Alamat",
-      detail: "Jatinangor, Indonesia",
+      detail: "Bandung, Indonesia",
       gradient: "from-green-500 to-green-700",
     },
   ];
